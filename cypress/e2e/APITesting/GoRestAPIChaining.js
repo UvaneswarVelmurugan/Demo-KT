@@ -12,10 +12,7 @@ describe('GoRest API Chaining', () =>
                 email: Math.random().toString(5).substring(2)+"@gmail.com",
                 status: 'active'
             },
-            headers:{
-                Authorization:auth_token
-            }
-        })
+            
         .then((response)=>{
         expect(response.status).equal(201)
         const userid=response.body.id
